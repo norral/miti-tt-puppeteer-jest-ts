@@ -2,7 +2,7 @@ import careersPage from '../../src/pages/careers.page';
 import loginPage from '../../src/pages/login.page';
 import mainPage from '../../src/pages/main.page';
 
-describe('Main page', () => {
+describe('Mitigram Main page', () => {
   beforeEach(async () => {
     await mainPage.open();
   });

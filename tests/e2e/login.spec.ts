@@ -5,14 +5,14 @@ describe('Mitigram Login page', () => {
   beforeAll(async () => {
     //I would clean up the DB and prepare the proper users for these scenarios here.
     //If there would be a lot scenarios and there are many kind of users to be created, than
-    // I would propbably move the creation part of the tests to the begining of each test.
+    // I would probably move the creation part of the tests to the beginning of each test.
     //I would use some kind of existing API or database manipulation for this.
     //I only would use the (E2E) UI methods for creating these users in worst case scenario,
     // because that is really time consuming.
   });
 
   afterAll(async () => {
-    //Do some additional cleanup if necessarry
+    //Do some additional cleanup if necessary
   });
 
   beforeEach(async () => {
@@ -67,7 +67,7 @@ describe('Mitigram Login page', () => {
       (e) => e.textContent
     );
 
-    //I usually don't like to assert on texts, keeping in mind multilanguge application,
+    //I usually don't like to assert on texts, keeping in mind multilingual application,
     // but this page is only available in English
     // and there is no kind of type parameter to check on in the DOM
     expect(textError).not.toBe(null);
@@ -122,7 +122,7 @@ describe('Mitigram Login page', () => {
     expect(textError).toContain(loginPage.emailIsInvalidMessage);
   });
 
-  //I dont like when the testname is dynamically put together, but to create a dataprovider
+  //I dont like when a test name is dynamically put together, but to create a data provider
   // and make it more readable in the logs it's faster this way
   it.each`
     email                       | message

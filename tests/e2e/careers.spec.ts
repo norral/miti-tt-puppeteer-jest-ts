@@ -1,6 +1,6 @@
 import careersPage from '../../src/pages/careers.page';
 
-describe('Mitigram careers page', () => {
+describe('Mitigram Careers page', () => {
   beforeEach(async () => {
     await careersPage.open();
   });
@@ -30,7 +30,7 @@ describe('Mitigram careers page', () => {
     //TODO
   });
 
-  it('should filter postions when an other filter is selected', async () => {
+  it('should filter positions when an other filter is selected', async () => {
     //before filtering
     const numberOfVisiblePositionsBeforeFilter = await page.$$eval(
       careersPage.positions,
