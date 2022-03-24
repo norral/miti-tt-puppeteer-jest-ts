@@ -43,9 +43,9 @@ describe('Mitigram Login page', () => {
     ];
 
     //wait will fail if one of them is missing
-    selectorsToBeShown.forEach(async (s) => {
+    for (const s of selectorsToBeShown) {
       await page.waitForSelector(s, { visible: true });
-    });
+    }
 
     //there should be two appstore links
     expect((await page.$$(loginPage.appStoreLinks)).length).toBe(2);
