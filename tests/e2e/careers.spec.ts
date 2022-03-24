@@ -45,7 +45,7 @@ describe('Mitigram Careers page', () => {
     const filterLinks = await page.$$(careersPage.filterButtons);
     await filterLinks[1].click();
 
-    //huge hack, but better than waiting for seoconds...
+    //huge hack, but better than waiting for seconds...
     // await page.waitForFunction(`document.querySelector("${careersPage.filterLinkSelectors}:nth-of-type(2)").getAttribute("class").includes("jl-active")`);
 
     //could not make that work
@@ -99,6 +99,6 @@ describe('Mitigram Careers page', () => {
 
   it('should show default controls and sections when opnened', async () => {
     //like Life at Mitigram section with its images
-    //like the whole subsription page fragment and Miti footer page fragment etc.
+    //like the whole subscription page fragment and Miti footer page fragment etc.
   });
 });

@@ -1,4 +1,4 @@
-import { IUser } from '../../src/interfaces/iUser';
+import { IUser } from '../interfaces/iUser';
 import { validUser } from '../data/login.data';
 import BasePage from './base.page';
 
@@ -7,7 +7,7 @@ class LoginPage extends BasePage {
   readonly emailInput = '#Email';
   readonly passwordInput = '#Password';
   readonly loginButton = '#loginBtn';
-  readonly notificatinBarError = '.noty_bar';
+  readonly notificationBarError = '.noty_bar';
 
   //other links
   readonly forgotPasswordLink = 'a[href="/Account/ForgotPassword"]';

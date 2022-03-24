@@ -50,7 +50,7 @@ describe('Mitigram Login page', () => {
     //there should be two appstore links
     expect((await page.$$(loginPage.appStoreLinks)).length).toBe(2);
     //and no error messages
-    expect((await page.$$(loginPage.notificatinBarError)).length).toBe(0);
+    expect((await page.$$(loginPage.notificationBarError)).length).toBe(0);
   });
 
   it('should show "Invalid login attempt." error message for an invalid password for a valid user', async () => {
@@ -63,7 +63,7 @@ describe('Mitigram Login page', () => {
     await page.waitForNetworkIdle();
 
     const textError = await page.$eval(
-      loginPage.notificatinBarError,
+      loginPage.notificationBarError,
       (e) => e.textContent
     );
 
@@ -78,7 +78,7 @@ describe('Mitigram Login page', () => {
     await loginPage.signIn(loginData.invalidUser);
 
     const textError = await page.$eval(
-      loginPage.notificatinBarError,
+      loginPage.notificationBarError,
       (e) => e.textContent
     );
 
@@ -91,7 +91,7 @@ describe('Mitigram Login page', () => {
     await loginPage.signIn(loginData.lockedUser);
 
     const textError = await page.$eval(
-      loginPage.notificatinBarError,
+      loginPage.notificationBarError,
       (e) => e.textContent
     );
     expect(textError).not.toBe(null);
@@ -102,7 +102,7 @@ describe('Mitigram Login page', () => {
     await loginPage.trySignInWithoutPassword(loginData.validUser);
 
     const textError = await page.$eval(
-      loginPage.notificatinBarError,
+      loginPage.notificationBarError,
       (e) => e.textContent
     );
     expect(textError).not.toBe(null);
@@ -114,7 +114,7 @@ describe('Mitigram Login page', () => {
     await page.waitForNetworkIdle();
 
     const textError = await page.$eval(
-      loginPage.notificatinBarError,
+      loginPage.notificationBarError,
       (e) => e.textContent
     );
     expect(textError).not.toBe(null);
@@ -141,7 +141,7 @@ describe('Mitigram Login page', () => {
       await page.waitForNetworkIdle();
 
       const textError = await page.$eval(
-        loginPage.notificatinBarError,
+        loginPage.notificationBarError,
         (e) => e.textContent
       );
       expect(textError).not.toBe(null);

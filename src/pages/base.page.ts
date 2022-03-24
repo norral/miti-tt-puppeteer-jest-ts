@@ -1,7 +1,7 @@
 import 'dotenv/config';
 
 export default abstract class BasePage {
-  //Most of the pages are based on the same <sub_domain>.<domain>.com/<path> pattern, so we can save some time to delegate the responisbility
+  //Most of the pages are based on the same <sub_domain>.<domain>.com/<path> pattern, so we can save some time to delegate the responsibility
   // to the page objects to tell what are their <path>
   abstract getPath(): string;
 

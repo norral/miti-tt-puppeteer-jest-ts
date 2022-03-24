@@ -1,7 +1,7 @@
 import loginPage from '../../src/pages/login.page';
 
 describe('Mitigram Login page', () => {
-  //Probably better ways are out there to test it and penetration testing is needed reguralry by experts anyway,
+  //Probably better ways are out there to test it and penetration testing is needed regularly by experts anyway,
   // but good to have some very basic test like this in the scope
 
   beforeEach(async () => {

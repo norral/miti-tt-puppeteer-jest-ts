@@ -17,7 +17,7 @@ describe('Mitigram Main page', () => {
   });
 
   it('should open the Careers page when "Careers link" is clicked', async () => {
-    //accpet Cookie popup
+    //accept Cookie popup
     await page.waitForSelector(mainPage.acceptCookieButton, { visible: true });
     await page.click(mainPage.acceptCookieButton);
     await page.waitForSelector(mainPage.careersLink, { visible: true });
